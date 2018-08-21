@@ -18,7 +18,7 @@
 <Server port='-1'>
 
     <Service name='Catalina'>
-        <Connector port='${http.port}' bindOnInit='false' connectionTimeout='20000' compression="on" compressionMinSize="1024" noCompressionUserAgents="gozilla, traviata" compressableMimeType="text/css,text/plain,text/javascript,application/javascript,application/json,application/x-javascript,application/xml,application/xml+rss,application/xhtml+xml,application/x-font-ttf,application/x-font-opentype,application/vnd.ms-fontobject,image/svg+xml,image/x-icon,application/rss+xml,application/atom_xml" />
+        <Connector port='${http.port}' bindOnInit='false' connectionTimeout='20000' compression="on" compressionMinSize="1024" noCompressionUserAgents="gozilla, traviata" compressableMimeType="text/html,text/css,text/plain,text/javascript,application/javascript,application/json,application/x-javascript,application/xml,application/xml+rss,application/xhtml+xml,application/x-font-ttf,application/x-font-opentype,application/vnd.ms-fontobject,image/svg+xml,image/x-icon,application/rss+xml,application/atom_xml" />
 
         <Engine defaultHost='localhost' name='Catalina'>
             <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto'/>
