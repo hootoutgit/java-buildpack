@@ -21,7 +21,7 @@
         <Connector port='${http.port}' bindOnInit='false' connectionTimeout='20000' compression="on" compressionMinSize="1024" noCompressionUserAgents="gozilla, traviata" compressableMimeType="text/html,text/css,text/plain,text/javascript,application/javascript,application/json,application/x-javascript,application/xml,application/xml+rss,application/xhtml+xml,application/x-font-ttf,application/x-font-opentype,application/vnd.ms-fontobject,image/svg+xml,image/x-icon,application/rss+xml,application/atom_xml" />
 
         <Engine defaultHost='localhost' name='Catalina'>
-            <Valve className='org.apache.catalina.valves.RemoteIpValve' protocolHeader='x-forwarded-proto'/>
+            <Valve className="org.apache.catalina.valves.RemoteIpValve" remoteIpHeader="x-forwarded-for" protocolHeader="x-forwarded-proto" protocolHeaderHttpsValue="https" />
             <Valve className='org.cloudfoundry.tomcat.logging.access.CloudFoundryAccessLoggingValve'
                    pattern='[ACCESS] %{org.apache.catalina.AccessLog.RemoteAddr}r %l %t %D %F %B %S vcap_request_id:%{X-Vcap-Request-Id}i'
                    enabled='${access.logging.enabled}'/>
