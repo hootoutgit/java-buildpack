@@ -33,15 +33,7 @@
       
        <Connector URIEncoding="UTF-8" port='${http.port}' bindOnInit='false' connectionTimeout='20000' compression="on" compressionMinSize="1024" noCompressionUserAgents="gozilla, traviata" compressableMimeType="text/html,text/css,text/plain,text/javascript,application/javascript,application/json,application/x-javascript,application/xml,application/xml+rss,application/xhtml+xml,application/x-font-ttf,application/x-font-opentype,application/vnd.ms-fontobject,image/svg+xml,image/x-icon,application/rss+xml,application/atom_xml" />
       
-      <Connector URIEncoding="UTF-8" port="8443"
-  protocol="org.apache.coyote.http11.Http11AprProtocol"
-  maxThreads="150" SSLEnabled="true">
-    <UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol"/>
-    <SSLHostConfig honorCipherOrder="false">
-        <Certificate certificateKeyFile="conf/ca.key"
-          certificateFile="conf/ca.crt"/>
-    </SSLHostConfig>
-</Connector>
+
       
       
     </Service>
